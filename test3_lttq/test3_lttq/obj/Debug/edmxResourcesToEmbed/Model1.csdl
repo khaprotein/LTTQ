@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanlyDoanhthuphimModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Phim">
+    <Key>
+      <PropertyRef Name="madon" />
+    </Key>
+    <Property Name="madon" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tenphim" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="quocgia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="theloai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="NCC" Type="DateTime" Precision="3" />
+    <Property Name="dotuoi" Type="Int32" />
+    <NavigationProperty Name="phim2d" Relationship="Self.FK__phim2d__madon__398D8EEE" FromRole="Phim" ToRole="phim2d" />
+    <NavigationProperty Name="phim3d" Relationship="Self.FK__phim3d__madon__3C69FB99" FromRole="Phim" ToRole="phim3d" />
+  </EntityType>
+  <EntityType Name="phim2d">
+    <Key>
+      <PropertyRef Name="madon" />
+    </Key>
+    <Property Name="madon" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PTGD" Type="Double" />
+    <NavigationProperty Name="Phim" Relationship="Self.FK__phim2d__madon__398D8EEE" FromRole="phim2d" ToRole="Phim" />
+    <Property Name="tendon" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="phim3d">
+    <Key>
+      <PropertyRef Name="madon" />
+    </Key>
+    <Property Name="madon" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PTDB" Type="Double" />
+    <NavigationProperty Name="Phim" Relationship="Self.FK__phim3d__madon__3C69FB99" FromRole="phim3d" ToRole="Phim" />
+    <Property Name="tendon" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK__phim2d__madon__398D8EEE">
+    <End Role="Phim" Type="Self.Phim" Multiplicity="1" />
+    <End Role="phim2d" Type="Self.phim2d" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Phim">
+        <PropertyRef Name="madon" />
+      </Principal>
+      <Dependent Role="phim2d">
+        <PropertyRef Name="madon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__phim3d__madon__3C69FB99">
+    <End Role="Phim" Type="Self.Phim" Multiplicity="1" />
+    <End Role="phim3d" Type="Self.phim3d" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Phim">
+        <PropertyRef Name="madon" />
+      </Principal>
+      <Dependent Role="phim3d">
+        <PropertyRef Name="madon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanlyDoanhthuphimEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Phims" EntityType="Self.Phim" />
+    <EntitySet Name="phim2d" EntityType="Self.phim2d" />
+    <EntitySet Name="phim3d" EntityType="Self.phim3d" />
+    <AssociationSet Name="FK__phim2d__madon__398D8EEE" Association="Self.FK__phim2d__madon__398D8EEE">
+      <End Role="Phim" EntitySet="Phims" />
+      <End Role="phim2d" EntitySet="phim2d" />
+    </AssociationSet>
+    <AssociationSet Name="FK__phim3d__madon__3C69FB99" Association="Self.FK__phim3d__madon__3C69FB99">
+      <End Role="Phim" EntitySet="Phims" />
+      <End Role="phim3d" EntitySet="phim3d" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

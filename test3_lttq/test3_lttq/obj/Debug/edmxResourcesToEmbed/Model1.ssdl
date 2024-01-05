@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanlyDoanhthuphimModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Phim">
+    <Key>
+      <PropertyRef Name="madon" />
+    </Key>
+    <Property Name="madon" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="tenphim" Type="nvarchar" MaxLength="255" />
+    <Property Name="quocgia" Type="nvarchar" MaxLength="50" />
+    <Property Name="theloai" Type="nvarchar" MaxLength="20" />
+    <Property Name="NCC" Type="datetime" />
+    <Property Name="dotuoi" Type="int" />
+  </EntityType>
+  <EntityType Name="phim2d">
+    <Key>
+      <PropertyRef Name="madon" />
+    </Key>
+    <Property Name="madon" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="tendon" Type="varchar" MaxLength="5" />
+    <Property Name="PTGD" Type="float" />
+  </EntityType>
+  <EntityType Name="phim3d">
+    <Key>
+      <PropertyRef Name="madon" />
+    </Key>
+    <Property Name="madon" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="tendon" Type="varchar" MaxLength="5" />
+    <Property Name="PTDB" Type="float" />
+  </EntityType>
+  <Association Name="FK__phim2d__madon__398D8EEE">
+    <End Role="Phim" Type="Self.Phim" Multiplicity="1" />
+    <End Role="phim2d" Type="Self.phim2d" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Phim">
+        <PropertyRef Name="madon" />
+      </Principal>
+      <Dependent Role="phim2d">
+        <PropertyRef Name="madon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__phim3d__madon__3C69FB99">
+    <End Role="Phim" Type="Self.Phim" Multiplicity="1" />
+    <End Role="phim3d" Type="Self.phim3d" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Phim">
+        <PropertyRef Name="madon" />
+      </Principal>
+      <Dependent Role="phim3d">
+        <PropertyRef Name="madon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanlyDoanhthuphimModelStoreContainer">
+    <EntitySet Name="Phim" EntityType="Self.Phim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="phim2d" EntityType="Self.phim2d" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="phim3d" EntityType="Self.phim3d" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__phim2d__madon__398D8EEE" Association="Self.FK__phim2d__madon__398D8EEE">
+      <End Role="Phim" EntitySet="Phim" />
+      <End Role="phim2d" EntitySet="phim2d" />
+    </AssociationSet>
+    <AssociationSet Name="FK__phim3d__madon__3C69FB99" Association="Self.FK__phim3d__madon__3C69FB99">
+      <End Role="Phim" EntitySet="Phim" />
+      <End Role="phim3d" EntitySet="phim3d" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

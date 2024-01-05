@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuanlyDoanhthuphimModelStoreContainer" CdmEntityContainer="QuanlyDoanhthuphimEntities">
+    <EntitySetMapping Name="Phims">
+      <EntityTypeMapping TypeName="QuanlyDoanhthuphimModel.Phim">
+        <MappingFragment StoreEntitySet="Phim">
+          <ScalarProperty Name="madon" ColumnName="madon" />
+          <ScalarProperty Name="tenphim" ColumnName="tenphim" />
+          <ScalarProperty Name="quocgia" ColumnName="quocgia" />
+          <ScalarProperty Name="theloai" ColumnName="theloai" />
+          <ScalarProperty Name="NCC" ColumnName="NCC" />
+          <ScalarProperty Name="dotuoi" ColumnName="dotuoi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="phim2d">
+      <EntityTypeMapping TypeName="QuanlyDoanhthuphimModel.phim2d">
+        <MappingFragment StoreEntitySet="phim2d">
+          <ScalarProperty Name="tendon" ColumnName="tendon" />
+          <ScalarProperty Name="madon" ColumnName="madon" />
+          <ScalarProperty Name="PTGD" ColumnName="PTGD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="phim3d">
+      <EntityTypeMapping TypeName="QuanlyDoanhthuphimModel.phim3d">
+        <MappingFragment StoreEntitySet="phim3d">
+          <ScalarProperty Name="tendon" ColumnName="tendon" />
+          <ScalarProperty Name="madon" ColumnName="madon" />
+          <ScalarProperty Name="PTDB" ColumnName="PTDB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,15 @@
+D:\C#\baitap_LTTQ\th3\test3_lttq\test3_lttq\bin\Debug\test3_lttq.exe.config
+D:\C#\baitap_LTTQ\th3\test3_lttq\test3_lttq\bin\Debug\test3_lttq.exe
+D:\C#\baitap_LTTQ\th3\test3_lttq\test3_lttq\bin\Debug\test3_lttq.pdb
+D:\C#\baitap_LTTQ\th3\test3_lttq\test3_lttq\obj\Debug\test3_lttq.csproj.AssemblyReference.cache
+D:\C#\baitap_LTTQ\th3\test3_lttq\test3_lttq\obj\Debug\test3_lttq.Form1.resources
+D:\C#\baitap_LTTQ\th3\test3_lttq\test3_lttq\obj\Debug\test3_lttq.Properties.Resources.resources
+D:\C#\baitap_LTTQ\th3\test3_lttq\test3_lttq\obj\Debug\test3_lttq.csproj.GenerateResource.cache
+D:\C#\baitap_LTTQ\th3\test3_lttq\test3_lttq\obj\Debug\test3_lttq.csproj.CoreCompileInputs.cache
+D:\C#\baitap_LTTQ\th3\test3_lttq\test3_lttq\obj\Debug\test3_lttq.exe
+D:\C#\baitap_LTTQ\th3\test3_lttq\test3_lttq\obj\Debug\test3_lttq.pdb
+D:\C#\baitap_LTTQ\th3\test3_lttq\test3_lttq\bin\Debug\EntityFramework.dll
+D:\C#\baitap_LTTQ\th3\test3_lttq\test3_lttq\bin\Debug\EntityFramework.SqlServer.dll
+D:\C#\baitap_LTTQ\th3\test3_lttq\test3_lttq\bin\Debug\EntityFramework.xml
+D:\C#\baitap_LTTQ\th3\test3_lttq\test3_lttq\bin\Debug\EntityFramework.SqlServer.xml
+D:\C#\baitap_LTTQ\th3\test3_lttq\test3_lttq\obj\Debug\test3_lttq.csproj.CopyComplete
