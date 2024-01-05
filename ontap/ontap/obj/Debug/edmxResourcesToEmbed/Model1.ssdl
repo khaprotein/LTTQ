@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyNVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+    </Key>
+    <Property Name="MaNhanVien" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="255" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="10" />
+    <Property Name="SoDienThoai" Type="varchar" MaxLength="15" />
+    <Property Name="NgayVaoLam" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NhanVienBanHang">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+    </Key>
+    <Property Name="MaNhanVien" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DoanhSo" Type="float" />
+  </EntityType>
+  <EntityType Name="NhanVienGiaoNhan">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+    </Key>
+    <Property Name="MaNhanVien" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="PhuCapNhienLieu" Type="float" />
+  </EntityType>
+  <Association Name="FK__NhanVienB__MaNha__398D8EEE">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="NhanVienBanHang" Type="Self.NhanVienBanHang" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="NhanVienBanHang">
+        <PropertyRef Name="MaNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NhanVienG__MaNha__3C69FB99">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="NhanVienGiaoNhan" Type="Self.NhanVienGiaoNhan" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="NhanVienGiaoNhan">
+        <PropertyRef Name="MaNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLyNVModelStoreContainer">
+    <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NhanVienBanHang" EntityType="Self.NhanVienBanHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NhanVienGiaoNhan" EntityType="Self.NhanVienGiaoNhan" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__NhanVienB__MaNha__398D8EEE" Association="Self.FK__NhanVienB__MaNha__398D8EEE">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="NhanVienBanHang" EntitySet="NhanVienBanHang" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NhanVienG__MaNha__3C69FB99" Association="Self.FK__NhanVienG__MaNha__3C69FB99">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="NhanVienGiaoNhan" EntitySet="NhanVienGiaoNhan" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

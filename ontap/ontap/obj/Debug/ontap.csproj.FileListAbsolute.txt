@@ -1,0 +1,15 @@
+D:\C#\baitap_LTTQ\ontap\ontap\bin\Debug\ontap.exe.config
+D:\C#\baitap_LTTQ\ontap\ontap\bin\Debug\ontap.exe
+D:\C#\baitap_LTTQ\ontap\ontap\bin\Debug\ontap.pdb
+D:\C#\baitap_LTTQ\ontap\ontap\obj\Debug\ontap.csproj.AssemblyReference.cache
+D:\C#\baitap_LTTQ\ontap\ontap\obj\Debug\ontap.Form1.resources
+D:\C#\baitap_LTTQ\ontap\ontap\obj\Debug\ontap.Properties.Resources.resources
+D:\C#\baitap_LTTQ\ontap\ontap\obj\Debug\ontap.csproj.GenerateResource.cache
+D:\C#\baitap_LTTQ\ontap\ontap\obj\Debug\ontap.csproj.CoreCompileInputs.cache
+D:\C#\baitap_LTTQ\ontap\ontap\obj\Debug\ontap.exe
+D:\C#\baitap_LTTQ\ontap\ontap\obj\Debug\ontap.pdb
+D:\C#\baitap_LTTQ\ontap\ontap\bin\Debug\EntityFramework.dll
+D:\C#\baitap_LTTQ\ontap\ontap\bin\Debug\EntityFramework.SqlServer.dll
+D:\C#\baitap_LTTQ\ontap\ontap\bin\Debug\EntityFramework.xml
+D:\C#\baitap_LTTQ\ontap\ontap\bin\Debug\EntityFramework.SqlServer.xml
+D:\C#\baitap_LTTQ\ontap\ontap\obj\Debug\ontap.csproj.CopyComplete
